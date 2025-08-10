@@ -2,7 +2,6 @@
 import { IFormRepository } from "../../application/interfaces/IFormRepository";
 import { IFormSubmission } from "../../domain/entities/formSubmission";
 import FormSubmissionModel, { FormSubmissionDoc } from "../database/models/formSubmissionModel";
-
 export class FormRepository implements IFormRepository {
   async save(data: IFormSubmission): Promise<IFormSubmission> {
     const created = await FormSubmissionModel.create({
